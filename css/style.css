@@ -375,6 +375,11 @@ main{
   line-height: 1.6;
 }
 
+.about-text span{
+  font-family: 'Satoshi 700';
+  color: rgb(29, 228, 255);
+}
+
 .about-text + ul{
   display: flex;
   flex-flow: row wrap;
