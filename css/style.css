@@ -636,7 +636,7 @@ footer span{
   }
 
   header{
-    width: 100vw;
+    width: 100%;
     padding: 2rem 3.5rem;
   }
 
@@ -835,6 +835,6 @@ footer span{
   }
 
   header{
-    width: 100vw;
+    width: 100%;
   }
 }
