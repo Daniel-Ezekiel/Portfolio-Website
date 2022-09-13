@@ -871,6 +871,10 @@ footer span{
     width: 60rem;
   }
 
+  .cta2{
+    display: none;
+  }
+
   .declaration + p{
     width: 75%;
   }
