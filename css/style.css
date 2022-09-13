@@ -680,10 +680,6 @@ footer span{
     padding: 2rem 3.5rem;
   }
 
-  .nav-menu{
-    background: none;
-  }
-
   .logo{
     width: 7.5rem;
   }
@@ -862,7 +858,9 @@ footer span{
     height: auto;
     justify-self: flex-end;
     flex-direction: row;
-    gap: 5.5rem
+    gap: 5.5rem;
+
+    background: none;
   }
 
   .hamburger{
