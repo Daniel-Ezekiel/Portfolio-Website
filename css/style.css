@@ -485,7 +485,7 @@ h3{
 }
 
 .side-project{
-  padding: 4.5rem 2.8rem;
+  padding: 4.5rem 2.75rem;
   max-width: 35rem;
   background: rgba(38, 50, 67, 1);
   box-shadow: 0 1rem 2rem 0 rgba(27, 27, 27, 0.1);
@@ -506,6 +506,10 @@ h3{
 .side-project span{
   margin: 2.2rem 0 0;
   color: #7E92D9;
+}
+
+.side-project span{
+  font-family: 'Satoshi 500';
 }
 
 /* CONTACT SECTION STYLING */
@@ -562,8 +566,6 @@ footer span{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
-  font-weight: 600;
 }
 
 /******************************************
@@ -576,6 +578,8 @@ footer span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-size: 1.55rem;
   }
 
   header{
@@ -587,14 +591,26 @@ footer span{
   }
 
   main{
-    min-height: 80vh;
+    min-height: 90vh;
     width: 90vw;
     
     justify-content: space-between;
   }
 
   main section{
-    width: 55vw;
+    width: 47rem;
+  }
+
+  h1,
+  .declaration{
+    font-size: 3.5rem;
+  }
+
+  .cta,
+  .cta1,
+  .cta2{
+    width: fit-content;
+    padding: 1.3rem 2.5rem;
   }
 
   .main-social-links,
@@ -632,14 +648,17 @@ footer span{
   }
   
   .notable-projects-box{
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
   }
 
   .side-project{
-    width: 33.33%;
+    width: 35rem;
   }
 
   #contact{
+    margin: 3rem 0;
+
     flex-direction: row;
     justify-content: center;
     gap: 2.5rem;
@@ -667,6 +686,10 @@ footer span{
 
   .logo{
     width: 7.5rem;
+  }
+
+  main section{
+    width: 52rem;
   }
 
   h1{
@@ -738,7 +761,7 @@ footer span{
 
   .separator ~ .project:nth-child(even) .project-main-info::before{
     top: 0;
-    left: 3.2rem;
+    left: 3.7rem;
   }
 
   .separator ~ .project:nth-child(odd) .project-main-info::before{
@@ -776,7 +799,11 @@ footer span{
   }
 
   .separator ~ .project.project3 .project-main-info::before{
-    left: 3.4rem ;
+    left: 3.7rem ;
+  }
+
+  .project-tools p{
+    display: inline-block;
   }
 
   .project-image-box::before{
@@ -788,6 +815,15 @@ footer span{
   .project-image-box > img{
     border-radius: 1.2rem;
     height: 28rem;
+  }
+
+  .notable-projects-box{
+    width: 100%;
+    flex-flow: row;
+  }
+
+  .side-project{
+    max-width: 33.33%;
   }
 
   .img-box{
@@ -856,7 +892,7 @@ footer span{
   }
 
   body > *{
-    width: 102.4rem;
+    width: 103rem;
   }
 
   header,
@@ -865,7 +901,12 @@ footer span{
   }
 
   main > section{
-    width: 70rem;
+    width: 65rem;
+  }
+
+  h1,
+  .declaration{
+    font-size: 4rem;
   }
 
   .project{
@@ -882,16 +923,5 @@ footer span{
 
   .cta2{
     width: fit-content;
-  }
-}
-
-@media screen and (min-width: 1920px){
-  body > *{
-    width: 110rem;
-  }
-
-  header,
-  footer{
-    width: 100%;
   }
 }
