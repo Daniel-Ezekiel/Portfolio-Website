@@ -1,5 +1,7 @@
 /* FONT LINK/IMPORT */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans:wght@300;400;500;600&display=swap');
+@import url(../css/okinesans.css);
+@import url(../css/satoshi.css);
+@import url(../css/general-sans.css);
 
 /* Box Model Hack */
 * {
@@ -34,7 +36,7 @@ html,body{
 body {
   background-color:rgb(34, 40, 49);
 
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Satoshi 400';
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.5;
@@ -48,17 +50,22 @@ footer{
   padding: 2rem;
 }
 
-h1,h2{
+h1,
+.declaration{
   margin: 0;
-  font-size: 3.6rem;
+
+  font-family: 'GeneralSans 700';
+  font-size: 3.5rem;
 }
 
 h2{
-  font-size: 2.3rem;
-  font-family: 'Fira Mono', monospace;
+  margin: 0;
+  font-size: 2.8rem;
+  font-family: 'Satoshi 700';
 }
 
 h3{  
+  font-family: 'Satoshi 900';
   font-size: 2rem;
 }
 
@@ -265,14 +272,6 @@ main{
   align-items: center;
 }
 
-.salutation{
-  font-family: 'Fira Mono', monospace;
-}
-
-h1{
-  margin: 0;
-}
-
 .name-highlight{
   background: -webkit-linear-gradient(top right, rgba(18, 55, 246, 1),
   rgba(9, 244, 244, 1));
@@ -284,21 +283,28 @@ h1{
 .declaration{  
   margin: 0;
 
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.4;
   color:rgb(178, 185, 207)
+}
+
+.cta-box{
+  margin-top: 4rem;
+}
+
+.cta, .cta1{
+  font-family: 'Satoshi 700';
 }
 
 .cta{
   display: inline-block;
   width: 12rem;
-  margin: 0.5rem 0.8rem;
+  margin: 0.5rem 1.8rem;
   margin-left: 0;
   padding: 1rem 1.5rem;
   border-radius: 1rem;
   background: linear-gradient(99.41deg, #002CC7 -39.51%, rgba(24, 185, 207, 0.9) 116.85%);
 
-  font-weight: 400;
   text-align: center;
   text-decoration: none;
   color:rgb(204, 213, 243)
@@ -366,6 +372,7 @@ h1{
 
 .about-text{
   padding-top: 1.2rem;
+  line-height: 1.6;
 }
 
 .about-text + ul{
@@ -450,11 +457,12 @@ h3{
 }
 
 .project-tools p{
-  font-weight: 500;
-  background: linear-gradient(271.39deg, rgba(29, 228, 255, 0.81) -6.94%, rgba(59, 83, 168, 0.9) 97.22%);
+  background: linear-gradient(150deg, rgba(29, 228, 255, 0.81) -6.94%, rgba(59, 83, 168, 0.9) 97.22%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   background-clip: text;
+
+  font-family: 'Satoshi 700';
 }
 
 .project-image-box{
@@ -477,7 +485,7 @@ h3{
 }
 
 .side-project{
-  padding: 4.5rem 2rem;
+  padding: 4.5rem 2.8rem;
   max-width: 35rem;
   background: rgba(38, 50, 67, 1);
   box-shadow: 0 1rem 2rem 0 rgba(27, 27, 27, 0.1);
@@ -491,12 +499,13 @@ h3{
 }
 
 .side-project img{
-  width: 3rem;
+  width: 3.5rem;
 }
 
-.side-project > h3{
-  margin: 1rem 0;
-  color: #7E92D9 !important;
+.side-project h3,
+.side-project span{
+  margin: 2.2rem 0 0;
+  color: #7E92D9;
 }
 
 /* CONTACT SECTION STYLING */
@@ -515,14 +524,16 @@ h3{
 }
 
 #contact span{
-  font-weight: 500;
+  font-family: 'Satoshi 500';
+  font-size: 1.6rem;
   color: rgba(126, 146, 217, 1);
 }
 
-#contact h4{
+h4{
   margin: 1rem;
-  font-size: 2.8rem;
-  font-weight: 500;
+
+  font-family: 'Satoshi 900';
+  font-size: 3rem;
 }
 
 h4 + p{
@@ -547,7 +558,7 @@ footer {
 }
 
 footer span{
-  background: linear-gradient(271.39deg, rgba(29, 228, 255, 0.81) -6.94%, rgba(59, 83, 168, 0.9) 97.22%);
+  background: linear-gradient(210deg, rgba(29, 228, 255, 0.81) -6.94%, rgba(59, 83, 168, 0.9) 97.22%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
