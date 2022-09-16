@@ -1,7 +1,7 @@
 /* FONT LINK/IMPORT */
-@import url(../css/okinesans.css);
-@import url(../css/satoshi.css);
-@import url(../css/general-sans.css);
+@import url(../css/font-root-css/satoshi.css);
+@import url(../css/font-root-css/okinesans.css);
+@import url(../css/font-root-css/general-sans.css);
 
 /* Box Model Hack */
 * {
@@ -871,7 +871,7 @@ footer span{
     width: 60rem;
   }
 
-  .cta2{
+  main .cta2{
     display: none;
   }
 
