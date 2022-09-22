@@ -160,6 +160,7 @@ nav img{
   border: none;
   outline: none;
   background: none;
+  cursor: pointer;
   z-index: 2
 }
 
@@ -435,7 +436,7 @@ main{
   display: flex;
   flex-direction: column-reverse;
 
-  max-width: 30rem;
+  max-width: 35rem;
   max-height: 58rem;
   background: rgb(38, 50, 67);
   box-shadow: 0 1rem 2rem 0 rgba(27, 27, 27, 0.1);
@@ -444,7 +445,7 @@ main{
 }
 
 .project-details-box{
-  padding: 2rem ;
+  padding: 2.5rem ;
   padding-bottom: 0
 }
 
@@ -465,6 +466,8 @@ h3{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   background-clip: text;
+
+  padding-bottom: 0.3rem;
 
   font-family: 'Satoshi 700';
 }
@@ -501,6 +504,10 @@ h3{
   max-width: 35rem;
   background: rgba(38, 50, 67, 1);
   box-shadow: 0 1rem 2rem 0 rgba(27, 27, 27, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .side-project > div{
