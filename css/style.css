@@ -668,7 +668,7 @@ footer span{
   
   .notable-projects-box{
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .side-project{
