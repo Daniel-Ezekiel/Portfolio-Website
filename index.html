@@ -77,6 +77,44 @@
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script defer type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("ZtawX5PzXezIijqHo");
+      })();
+    </script>
+    <script defer type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("service_92tq4vj", "template_6uekskq", this).then(
+              function () {
+                console.log("SUCCESS!");
+                document
+                  .querySelectorAll("input")
+                  .forEach((input) => (input.value = ""));
+                document.querySelector("textarea").value = "";
+                alert("Your message has been sent successfully! Thank you!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+
+    <script defer type="text/javascript" src="js/main.js"></script>
   </head>
 
   <body>
@@ -481,6 +519,50 @@
             </a>
           </div>
         </div>
+
+        <div class="project project6">
+          <div class="project-details-box">
+            <div class="project-main-info">
+              <span>Project #4</span>
+              <h3>Space Tourism</h3>
+              <p>
+                This is a Web App built using React JS for space enthusiasts to
+                travel though space using the multiple pages on the website and
+                learn more about different planetary bodies and tech used in the
+                aerospace industry.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/Daniel-Ezekiel/space-tourism"
+                  target="_blank"
+                >
+                  <img src="img/github.svg" alt="github repo link icon" />
+                </a>
+                <a
+                  href="https://outerspace-tourism.vercel.app/"
+                  target="_blank"
+                >
+                  <img src="img/link.svg" alt="live site demo link icon" />
+                </a>
+              </div>
+            </div>
+
+            <div class="project-tools">
+              <p>React, TailwindCSS</p>
+            </div>
+          </div>
+
+          <div class="project-image-box">
+            <a
+              href="https://outerspace-tourism.vercel.app/"
+              target="_blank"
+              class="project-img-link"
+            >
+              <img src="img/project6.webp" alt="Project Preview Image" />
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="other-projects-box">
@@ -624,7 +706,36 @@
           it.
         </p>
 
-        <a href="mailto:dbezekiel77@gmail.com" class="cta cta2">Get in Touch</a>
+        <form id="contact-form">
+          <input type="hidden" name="contact_number" />
+          <div class="form-control">
+            <label>Name <span>*</span></label>
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Enter your name here"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label>Email <span>*</span></label>
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Enter your email address here"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label>Message <span>*</span></label>
+            <textarea
+              name="message"
+              placeholder="Enter your message here"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Get in Touch</button>
+        </form>
       </div>
 
       <aside class="contact-social-links social-links">
@@ -665,6 +776,5 @@
     <footer>
       <p>designed and developed by <span>Daniel Ezekiel</span></p>
     </footer>
-    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

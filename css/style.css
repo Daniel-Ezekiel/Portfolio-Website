@@ -597,6 +597,58 @@ h4 + p {
   padding: 1rem 0 2rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-control {
+  display: grid;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+#contact label > span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.form-control input {
+  padding: 1.2rem;
+  border: 0.1rem solid;
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 1rem;
+}
+
+.form-control textarea {
+  padding: 1.2rem;
+  border: 0.1rem solid;
+  min-height: 35rem;
+  max-height: 48rem;
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 1rem;
+}
+
+form button {
+  display: block;
+  margin: auto;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  width: fit-content;
+  background: aliceblue;
+  text-transform: uppercase;
+
+  border-image-slice: 0;
+  border-image-source: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
 #contact > aside {
   display: flex;
   justify-content: center;
@@ -726,7 +778,7 @@ footer span {
     gap: 2.5rem;
   }
 
-  #contact div {
+  #contact > div {
     width: 55vw;
     padding: 2.5rem;
   }
