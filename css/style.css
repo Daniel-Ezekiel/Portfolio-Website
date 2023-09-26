@@ -692,7 +692,12 @@ footer span {
 
   .featured-projects-box {
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: start;
+    gap: 4rem;
+  }
+
+  .project {
+    max-width: 34rem;
   }
 
   .other-projects-box .separator::after {
@@ -831,6 +836,10 @@ footer span {
     justify-content: flex-end;
   }
 
+  .project .project-image-box {
+    max-width: 64%;
+  }
+
   .separator ~ .project:nth-child(even) .project-image-box {
     position: absolute;
     right: 0;
@@ -871,11 +880,12 @@ footer span {
 
   .notable-projects-box {
     width: 100%;
-    flex-flow: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .side-project {
-    max-width: 33.33%;
+    width: unset;
   }
 
   .img-box {
