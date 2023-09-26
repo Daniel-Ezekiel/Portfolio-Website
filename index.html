@@ -82,39 +82,8 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <script defer type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init("ZtawX5PzXezIijqHo");
-      })();
-    </script>
-    <script defer type="text/javascript">
-      window.onload = function () {
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // generate a five digit number for the contact_number variable
-            this.contact_number.value = (Math.random() * 100000) | 0;
-            // these IDs from the previous steps
-            emailjs.sendForm("service_92tq4vj", "template_6uekskq", this).then(
-              function () {
-                console.log("SUCCESS!");
-                document
-                  .querySelectorAll("input")
-                  .forEach((input) => (input.value = ""));
-                document.querySelector("textarea").value = "";
-                alert("Your message has been sent successfully! Thank you!");
-              },
-              function (error) {
-                console.log("FAILED...", error);
-              }
-            );
-          });
-      };
-    </script>
-
     <script defer type="text/javascript" src="js/main.js"></script>
+    <script defer type="text/javascript" src="js/email.js"></script>
   </head>
 
   <body>
